@@ -11,31 +11,13 @@ private:
     Point p2;
 
 public:
-    Line()
-    {
-        p1 = Point(0,0);
-        p2 = Point(0,0);
-    }
+    Line();
+    Line(Point a, Point b);
 
-    Line(Point a, Point b)
-    {
-        p1 = a;
-        p2 = b;
-    }
-
-    void setPoints(Point a, Point b)
-    {
-        p1 = a;
-        p2 = b;
-    }
+    void setPoints(Point a, Point b);
 
     double length()
-    {
-        double dx = p2.getX() - p1.getX();
-        double dy = p2.getY() - p1.getY();
-
-        return sqrt(dx*dx + dy*dy);
-    }
 };
 
 #endif
+
